@@ -10,7 +10,14 @@ namespace DesafioPOO.Models
         // FEITO!!!
         public override void InstalarAplicativo(string nomeApp)
         {
-            Console.Write("Instalando o aplicativo " + nomeApp + " no Iphone");
+            if (!string.IsNullOrEmpty(nomeApp))
+            {
+                Console.Write("Instalando o aplicativo " + nomeApp + " no Iphone");
+            }
+            else
+            {
+                throw new Exception("O nome do aplicativo não foi fornecido");
+            }
         }
     }
 }

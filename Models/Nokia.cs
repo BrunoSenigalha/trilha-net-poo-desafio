@@ -10,7 +10,14 @@ namespace DesafioPOO.Models
         // FEITO!!!
         public override void InstalarAplicativo(string nomeApp)
         {
-            Console.WriteLine("Instalando o aplicativo Nokia " + nomeApp);
+            if (!string.IsNullOrEmpty(nomeApp))
+            {
+                Console.WriteLine("Instalando o aplicativo Nokia " + nomeApp);
+            }
+            else
+            { 
+                Console.WriteLine("O nome do aplicativo não foi fornecido."); 
+            }
         }
     }
 }

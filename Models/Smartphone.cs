@@ -2,7 +2,20 @@ namespace DesafioPOO.Models
 {
     public abstract class Smartphone
     {
-        public string Numero { get; set; }
+        private string _numero;
+        public string Numero
+        {
+            get => _numero;
+
+            set
+            {
+                if (value == "")
+                {
+                    throw new ArgumentNullException("O numero de celular nao foi informado.");
+                }
+                _numero = value;
+            }
+        }
         // FEITO!!!
         private string Modelo { get; set; }
         private string Imei { get; set; }
